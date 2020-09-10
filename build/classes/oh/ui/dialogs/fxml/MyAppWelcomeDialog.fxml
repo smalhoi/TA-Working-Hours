@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="oh.ui.dialogs.controller.MyAppWelcomeDialogController">
+   <left>
+      <VBox alignment="BASELINE_LEFT" prefHeight="400.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Recent Work">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <VBox fx:id="recentwork" />
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Course Site Genertor" textFill="#3738ded4">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+               <effect>
+                  <DisplacementMap>
+                     <mapData>
+                        <FloatMap />
+                     </mapData>
+                  </DisplacementMap>
+               </effect>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Label>
+            <ImageView fx:id="imageView" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </ImageView>
+            <Button mnemonicParsing="false" onAction="#createNewSite" style="-fx-font-weight: bold; -fx-font-size: 15;" text="Create New Site">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </center>
+   <padding>
+      <Insets left="50.0" top="50.0" />
+   </padding>
+</BorderPane>

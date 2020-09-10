@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="oh.ui.MainGuiController">
+   <center>
+      <TabPane fx:id="workspace" prefHeight="200.0" prefWidth="200.0" stylesheets="@MainGui.css" tabClosingPolicy="UNAVAILABLE" tabMinHeight="30.0" tabMinWidth="143.0" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab fx:id="site_tab" closable="false" styleClass="my-head-pane" text="Site">
+               <content>
+                   <fx:include fx:id="siteUi" source="siteui/SiteUi.fxml" />
+               </content>
+          </Tab>
+          <Tab fx:id="syllabus_tab" closable="false" styleClass="my-head-pane" text="Syllabus">
+               <content>
+                  <fx:include fx:id="syllabusUi" source="syllabusui/syllabusUi.fxml" />
+               </content>
+          </Tab>
+            <Tab fx:id="meeting_times_tab" closable="false" styleClass="my-head-pane" text="Meeting Times">
+               <content>
+                  <fx:include fx:id="meetingUi" source="meetingui/meetingUi.fxml" />
+               </content>
+            </Tab>
+            <Tab fx:id="office_hours_tab" closable="false" styleClass="my-head-pane" text="Office Hours" />
+            <Tab fx:id="schedule_tab" closable="false" styleClass="my-head-pane" text="Schedule">
+               <content>
+                  <fx:include fx:id="scheduleUi" source="scheduleui/scheduleUi.fxml" />
+               </content>
+            </Tab>
+        </tabs>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <BorderPane.margin>
+            <Insets top="10.0" />
+         </BorderPane.margin>
+      </TabPane>
+   </center>
+   <top>
+      <HBox fx:id="topToolbarPane" BorderPane.alignment="CENTER" />
+   </top>
+</BorderPane>

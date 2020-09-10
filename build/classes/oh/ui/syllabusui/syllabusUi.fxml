@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane fitToWidth="true" styleClass="my-pane-base" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="oh.ui.syllabusui.SyllabusUiController">
+    <content>
+       <VBox spacing="5.0" styleClass="my-pane-base">
+          <children>
+             <VBox styleClass="my-pane-elem">
+                <children>
+                   <HBox alignment="CENTER_LEFT" spacing="10.0">
+                      <children>
+                         <Button fx:id="description_bt" mnemonicParsing="false" onAction="#trigger_description_bt" styleClass="my-op-btn" text="+" />
+                         <Label fx:id="syllabus_description" styleClass="my-head-label" text="Description:" />
+                      </children>
+                   </HBox>
+                   <TextArea fx:id="description_textarea" prefHeight="0.0" visible="false" />
+                </children>
+             </VBox>
+             <VBox layoutX="10.0" layoutY="10.0" styleClass="my-pane-elem">
+                <children>
+                   <HBox alignment="CENTER_LEFT" spacing="10.0">
+                      <children>
+                         <Button fx:id="topics_bt" mnemonicParsing="false" onAction="#trigger_topics_bt" styleClass="my-op-btn" text="+" />
+                         <Label fx:id="syllabus_topics" styleClass="my-head-label" text="Topics:" />
+                      </children>
+                   </HBox>
+                   <TextArea fx:id="topics_textarea" prefHeight="0.0" visible="false" />
+                </children>
+             </VBox>
+             <VBox layoutX="10.0" layoutY="33.0" styleClass="my-pane-elem">
+                <children>
+                   <HBox alignment="CENTER_LEFT" spacing="10.0">
+                      <children>
+                         <Button fx:id="prerequisites_bt" mnemonicParsing="false" onAction="#trigger_prerequisites_bt" styleClass="my-op-btn" text="+" />
+                         <Label fx:id="syllabus_prerequisites" styleClass="my-head-label" text="Prerequisites:" />
+                      </children>
+                   </HBox>
+                   <TextArea fx:id="prerequisites_textarea" prefHeight="0.0" visible="false" />
+                </children>
+             </VBox>
+             <VBox layoutX="10.0" layoutY="56.0" styleClass="my-pane-elem">
+                <children>
+                   <HBox alignment="CENTER_LEFT" spacing="10.0">
+                      <children>
+                         <Button fx:id="outcomes_bt" mnemonicParsing="false" onAction="#trigger_outcomes_bt" styleClass="my-op-btn" text="+" />
+                         <Label fx:id="syllabus_outcomes" styleClass="my-head-label" text="Outcomes:" />
+                      </children>
+                   </HBox>
+                   <TextArea fx:id="outcomes_textarea" prefHeight="0.0" visible="false" />
+                </children>
+             </VBox>
+             <VBox layoutX="10.0" layoutY="109.0" styleClass="my-pane-elem">
+                <children>
+                   <HBox alignment="CENTER_LEFT" spacing="10.0">
+                      <children>
+                         <Button fx:id="textbooks_bt" mnemonicParsing="false" onAction="#trigger_textbooks_bt" styleClass="my-op-btn" text="+" />
+                         <Label fx:id="syllabus_textbooks" styleClass="my-head-label" text="Textbooks:" />
+                      </children>
+                   </HBox>
+                   <TextArea fx:id="textbooks_textarea" prefHeight="0.0" visible="false" />
+                </children>
+             </VBox>
+             <VBox layoutX="10.0" layoutY="142.0" styleClass="my-pane-elem">
+                <children>
+                   <HBox alignment="CENTER_LEFT" spacing="10.0">
+                      <children>
+                         <Button fx:id="graded_bt" mnemonicParsing="false" onAction="#trigger_graded_bt" styleClass="my-op-btn" text="+" />
+                         <Label fx:id="syllabus_graded" styleClass="my-head-label" text="Graded Components:" />
+                      </children>
+                   </HBox>
+                   <TextArea fx:id="graded_area" prefHeight="0.0" visible="false" />
+                </children>
+             </VBox>
+             <VBox layoutX="10.0" layoutY="175.0" styleClass="my-pane-elem">
+                <children>
+                   <HBox alignment="CENTER_LEFT" spacing="10.0">
+                      <children>
+                         <Button fx:id="grading_bt" mnemonicParsing="false" onAction="#trigger_grading_bt" styleClass="my-op-btn" text="+" />
+                         <Label fx:id="syllabus_grading" styleClass="my-head-label" text="Grading Note:" />
+                      </children>
+                   </HBox>
+                   <TextArea fx:id="grading_area" prefHeight="0.0" visible="false" />
+                </children>
+             </VBox>
+             <VBox layoutX="10.0" layoutY="208.0" styleClass="my-pane-elem">
+                <children>
+                   <HBox alignment="CENTER_LEFT" spacing="10.0">
+                      <children>
+                         <Button fx:id="academic_bt" mnemonicParsing="false" onAction="#trigger_academic_bt" styleClass="my-op-btn" text="+" />
+                         <Label fx:id="syllabus_academic" styleClass="my-head-label" text="Academic Dishonesty:" />
+                      </children>
+                   </HBox>
+                   <TextArea fx:id="academic_area" prefHeight="0.0" visible="false" />
+                </children>
+             </VBox>
+             <VBox layoutX="10.0" layoutY="241.0" styleClass="my-pane-elem">
+                <children>
+                   <HBox alignment="CENTER_LEFT" spacing="10.0">
+                      <children>
+                         <Button fx:id="special_bt" mnemonicParsing="false" onAction="#trigger_special_bt" styleClass="my-op-btn" text="+" />
+                         <Label fx:id="syllabus_special" styleClass="my-head-label" text="Special Assistance:" />
+                      </children>
+                   </HBox>
+                   <TextArea fx:id="special_area" prefHeight="0.0" visible="false" />
+                </children>
+             </VBox>
+          </children>
+          <padding>
+             <Insets left="5.0" />
+          </padding>
+       </VBox>
+    </content>
+    <padding>
+       <Insets right="5.0" />
+    </padding>
+ </ScrollPane>

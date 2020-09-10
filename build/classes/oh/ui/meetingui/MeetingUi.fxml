@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane fitToWidth="true" hbarPolicy="NEVER" prefHeight="600.0" prefWidth="800.0" styleClass="my-pane-base" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="oh.ui.meetingui.MeetingUiController">
+    <content>
+       <VBox spacing="5.0" styleClass="my-pane-base">
+          <children>
+             <VBox spacing="5.0" styleClass="my-pane-elem">
+                <children>
+                   <HBox alignment="CENTER_LEFT" spacing="10.0">
+                      <children>
+                         <Button mnemonicParsing="false" styleClass="my-op-btn" text="+" />
+                         <Button mnemonicParsing="false" styleClass="my-op-btn" text="-" />
+                         <Label fx:id="meeting_lectures" styleClass="my-head-label" text="Lectures" />
+                      </children>
+                   </HBox>
+                   <TableView fx:id="lectures" prefHeight="200.0">
+                     <columns>
+                       <TableColumn fx:id="ml_section" prefWidth="200.0" text="Section" />
+                       <TableColumn fx:id="ml_days" prefWidth="200.0" text="Days" />
+                         <TableColumn fx:id="ml_time" prefWidth="190.0" text="Time" />
+                         <TableColumn fx:id="ml_room" prefWidth="190.0" text="Room" />
+                     </columns>
+                   </TableView>
+                </children>
+             </VBox>
+             <VBox layoutX="10.0" layoutY="10.0" spacing="5.0" styleClass="my-pane-elem">
+                <children>
+                   <HBox alignment="CENTER_LEFT" spacing="10.0">
+                      <children>
+                         <Button mnemonicParsing="false" styleClass="my-op-btn" text="+" />
+                         <Button mnemonicParsing="false" styleClass="my-op-btn" text="-" />
+                         <Label fx:id="meeting_recitations" styleClass="my-head-label" text="Recitations" />
+                      </children>
+                   </HBox>
+                   <TableView fx:id="recitations" prefHeight="200.0">
+                      <columns>
+                         <TableColumn fx:id="mr_section" prefWidth="100.0" text="Section" />
+                         <TableColumn fx:id="mr_days_and_time" prefWidth="200.0" text="Days &amp; Time" />
+                         <TableColumn fx:id="mr_room" prefWidth="100.0" text="Room" />
+                         <TableColumn fx:id="mr_ta1" prefWidth="190.0" text="TA1" />
+                         <TableColumn fx:id="mr_ta2" prefWidth="190.0" text="TA2" />
+                      </columns>
+                   </TableView>
+                </children>
+             </VBox>
+             <VBox layoutX="10.0" layoutY="233.0" spacing="5.0" styleClass="my-pane-elem">
+                <children>
+                   <HBox alignment="CENTER_LEFT" spacing="10.0">
+                      <children>
+                         <Button mnemonicParsing="false" styleClass="my-op-btn" text="+" />
+                         <Button mnemonicParsing="false" styleClass="my-op-btn" text="-" />
+                         <Label fx:id="meeting_labs" styleClass="my-head-label" text="Labs" />
+                      </children>
+                   </HBox>
+                   <TableView fx:id="labs" prefHeight="200.0">
+                      <columns>
+                         <TableColumn fx:id="mb_section" prefWidth="100.0" text="Section" />
+                         <TableColumn fx:id="mb_days_and_time" prefWidth="200.0" text="Days &amp; Time" />
+                         <TableColumn fx:id="mb_room" prefWidth="100.0" text="Room" />
+                         <TableColumn fx:id="mb_ta1" prefWidth="190.0" text="TA1" />
+                         <TableColumn fx:id="mb_ta2" prefWidth="190.0" text="TA2" />
+                      </columns>
+                   </TableView>
+                </children>
+             </VBox>
+          </children>
+       </VBox>
+    </content>
+    <padding>
+       <Insets left="5.0" right="5.0" />
+    </padding>
+ </ScrollPane>

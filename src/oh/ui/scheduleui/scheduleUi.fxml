@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane fitToWidth="true" styleClass="my-pane-base" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="oh.ui.scheduleui.ScheduleUiController">
+    <content>
+       <VBox prefWidth="801.0" spacing="5.0" styleClass="my-pane-base">
+          <children>
+             <VBox spacing="5.0" styleClass="my-pane-elem">
+                <children>
+                   <HBox>
+                      <children>
+                         <Label fx:id="schedule_calendar_l" styleClass="my-head-label" text="Calendar Boundarles" />
+                      </children>
+                   </HBox>
+                   <HBox alignment="CENTER_LEFT" spacing="20.0">
+                      <children>
+                         <Label fx:id="schedule_starting_l" text="Starting Monday:" />
+                         <DatePicker fx:id="sc_starting_monday" onAction="#changeOnStarting" />
+                         <Label fx:id="schedule_ending_l" text="Ending Friday">
+                            <HBox.margin>
+                               <Insets left="20.0" />
+                            </HBox.margin>
+                         </Label>
+                         <DatePicker fx:id="sc_ending_friday" onAction="#changeOnEnding" />
+                      </children>
+                   </HBox>
+                </children>
+             </VBox>
+             <VBox spacing="5.0" styleClass="my-pane-elem">
+                <children>
+                   <HBox alignment="CENTER_LEFT" spacing="10.0">
+                      <children>
+                         <Button mnemonicParsing="false" styleClass="my-op-btn" text="-" />
+                         <Label fx:id="schedule_items_l" styleClass="my-head-label" text="Schedule items" />
+                      </children>
+                   </HBox>
+                   <TableView fx:id="schedule" prefHeight="200.0">
+                     <columns>
+                       <TableColumn fx:id="sc_type" prefWidth="200.0" text="Type" />
+                       <TableColumn fx:id="sc_date" prefWidth="200.0" text="Date" />
+                         <TableColumn fx:id="sc_title" prefWidth="190.0" text="Title" />
+                         <TableColumn fx:id="sc_topic" prefWidth="200.0" text="Topic" />
+                     </columns>
+                   </TableView>
+                </children>
+             </VBox>
+             <VBox spacing="10.0" styleClass="my-pane-elem">
+                <children>
+                   <Pane>
+                      <children>
+                         <GridPane hgap="5.0" vgap="5.0">
+                           <columnConstraints>
+                             <ColumnConstraints hgrow="SOMETIMES" maxWidth="371.0" minWidth="10.0" prefWidth="70.0" />
+                             <ColumnConstraints hgrow="SOMETIMES" maxWidth="685.0" minWidth="10.0" prefWidth="249.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                            <children>
+                               <Label fx:id="schedule_add_edit_l" prefHeight="19.0" prefWidth="73.0" styleClass="my-head-label" text="Add/Edit" />
+                               <Label fx:id="schedule_type_l" text="Type:" GridPane.rowIndex="1" />
+                               <Label fx:id="schedule_topic_l" text="Topic" GridPane.rowIndex="4" />
+                               <Label fx:id="schedule_link_l" text="Link:" GridPane.rowIndex="5" />
+                               <ComboBox fx:id="sc_type_text" editable="true" onAction="#detect_change" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                               <Label fx:id="schedule_date_l" text="Date:" GridPane.rowIndex="2" />
+                               <Label fx:id="schedule_title_l" text="Title:" GridPane.rowIndex="3" />
+                               <DatePicker fx:id="sc_date_picker" onAction="#detect_change" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                               <TextField fx:id="sc_title_text" onAction="#detect_change" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                               <TextField fx:id="sc_topic_text" onAction="#detect_change" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                               <TextField fx:id="sc_link_text" onAction="#detect_change" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                            </children>
+                         </GridPane>
+                      </children>
+                   </Pane>
+                   <HBox spacing="30.0">
+                      <children>
+                         <Button fx:id="schedule_add_update" mnemonicParsing="false" styleClass="windows7-default" text="Add/Update">
+                            <HBox.margin>
+                               <Insets />
+                            </HBox.margin></Button>
+                         <Button fx:id="schedule_clear" mnemonicParsing="false" styleClass="windows7-default" text="Clear" />
+                      </children>
+                   </HBox>
+                </children>
+             </VBox>
+          </children>
+          <padding>
+             <Insets left="5.0" />
+          </padding>
+       </VBox>
+    </content>
+    <padding>
+       <Insets right="5.0" />
+    </padding>
+ </ScrollPane>
